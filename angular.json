@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "test-task": "apps/test-task",
+    "test-task-e2e": "apps/test-task-e2e"
+  }
+}
