@@ -2,11 +2,13 @@
   "projectType": "application",
   "root": "apps/test-task",
   "sourceRoot": "apps/test-task/src",
-  "prefix": "tesk-task",
+  "prefix": "test-task",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/test-task",
         "index": "apps/test-task/src/index.html",
@@ -18,7 +20,10 @@
           "apps/test-task/src/favicon.ico",
           "apps/test-task/src/assets"
         ],
-        "styles": ["apps/test-task/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/test-task/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -83,7 +88,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/test-task"],
+      "outputs": [
+        "coverage/apps/test-task"
+      ],
       "options": {
         "jestConfig": "apps/test-task/jest.config.js",
         "passWithNoTests": true
